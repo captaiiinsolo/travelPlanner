@@ -1,4 +1,5 @@
-const { Model, DataTypes, Sequelize } = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Trip extends Model {}
 Trip.init(

@@ -1,7 +1,8 @@
-const { Model, DataTypes, Sequelize } = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
-class Traveler extends Model {}
-Traveler.init(
+class Traveller extends Model {}
+Traveller.init(
 	{
 		id: {
 			type: DataTypes.INTEGER,
@@ -15,7 +16,7 @@ Traveler.init(
 			type: DataTypes.STRING,
 		},
 	},
-	{ sequelize, modelName: "travelers" }
+	{ sequelize, modelName: "traveller" }
 );
 
-module.exports.Traveler = Traveler;
+module.exports.Traveller = Traveller;
